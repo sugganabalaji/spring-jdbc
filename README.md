@@ -27,8 +27,8 @@ A modern Spring boot JDBC project integrating PostgreSQL, built with annotation-
 `src/main/resources/application.yml`:
 ```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/Dev
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=postgre
+spring.datasource.driverClassName= org.postgresql.Driver
+spring.datasource.username=postgres
 spring.datasource.password=root
 
 ```
