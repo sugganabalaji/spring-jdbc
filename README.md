@@ -43,13 +43,11 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 3. **Build the project**
   ```bash
    mvn clean install
-
+   ```bash
 
 4. **Run the application**
    ```bash
    mvn spring-boot:run
-
-
 
 🗂️ **Project Structure**
 spring-jdbc/
