@@ -7,25 +7,25 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Student {
 
-    private int rollNo;
-    private String name;
+    private int sId;
+    private String sName;
     private int marks;
 
     public Student() {
         System.out.println("Student object created");
     }
 
-    public int getRollNo() {
-        return  rollNo;
+    public int getSId() {
+        return  sId;
     }
-    public void setRollNo(int rollNo) {
-        this.rollNo = rollNo;
+    public void setSId(int sId) {
+        this.sId = sId;
     }
-    public String getName() {
-        return  name;
+    public String getSName() {
+        return  sName;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setSName(String sName) {
+        this.sName = sName;
     }
     public int getMarks() {
         return  marks;
@@ -37,9 +37,9 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "rollNo=" + rollNo +
-                ", name='" + name + '\'' +
-                ", marks=" + marks +
+                "sId=" + getSId() +
+                ", sName='" + getSName() + '\'' +
+                ", marks=" + getMarks() +
                 '}';
     }
 }

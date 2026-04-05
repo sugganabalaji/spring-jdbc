@@ -22,8 +22,8 @@ public class StudentRepository {
     }
 
     public void save(Student student) {
-        String sql = "insert into student(rollNo, name, marks) values (?, ?, ?)";
-        int rows = jdbcTemplate.update(sql, student.getRollNo(), student.getName(), student.getMarks());
+        String sql = "insert into student(sid, sname, marks) values (?, ?, ?)";
+        int rows = jdbcTemplate.update(sql, student.getSId(), student.getSName(), student.getMarks());
         System.out.println(rows + " row(s) inserted successfully.");
     }
 
@@ -33,8 +33,8 @@ public class StudentRepository {
         //way-4
         return jdbcTemplate.query(sql, (rs, rowNum) -> {
             Student student = new Student();
-            student.setRollNo(rs.getInt("rollNo"));
-            student.setName(rs.getString("name"));
+            student.setSId(rs.getInt("sid"));
+            student.setSName(rs.getString("sname"));
             student.setMarks(rs.getInt("marks"));
             return student;
         });
@@ -47,8 +47,8 @@ public class StudentRepository {
     /* RowMapper<Student> rowMapper = new RowMapper<>() {
         public Student mapRow(ResultSet rs, int rowNum) throws SQLException {
             Student student = new Student();
-            student.setRollNo(rs.getInt("rollNo"));
-            student.setName(rs.getString("name"));
+            student.setSId(rs.getInt("sid"));
+            student.setSName(rs.getString("sname"));
             student.setMarks(rs.getInt("marks"));
             return student;
         }
@@ -57,8 +57,8 @@ public class StudentRepository {
     // way-3
     RowMapper<Student> rowMapper = (rs, rowNum) -> {
         Student student = new Student();
-        student.setRollNo(rs.getInt("rollNo"));
-        student.setName(rs.getString("name"));
+        student.setSId(rs.getInt("sid"));
+        student.setSName(rs.getString("sname"));
         student.setMarks(rs.getInt("marks"));
         return student;
     };
