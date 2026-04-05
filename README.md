@@ -30,9 +30,9 @@ A modern Spring JDBC project integrating PostgreSQL, built with annotation-drive
 
 2. **Configure PostgreSQL**
 - Create a database:
-
-
+```sql
    CREATE DATABASE spring_jdbc_demo;
+```
   
 - Update application.properties:
 spring.datasource.url=jdbc:postgresql://localhost:5432/spring_jdbc_demo
@@ -43,13 +43,15 @@ spring.datasource.driver-class-name=org.postgresql.Driver
 3. **Build the project**
   ```bash
    mvn clean install
-   ```bash
+   ```
 
 4. **Run the application**
    ```bash
    mvn spring-boot:run
+   ```
 
 🗂️ **Project Structure**
+```
 spring-jdbc/
  ├── src/main/java/com/app/spring-jdbc
  │    ├── config/        # Spring configuration
@@ -59,6 +61,7 @@ spring-jdbc/
  ├── src/main/resources/
  │    └── application.properties
  └── pom.xml
+```
 
 
 
